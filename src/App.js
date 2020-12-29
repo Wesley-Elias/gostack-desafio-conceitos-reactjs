@@ -1,4 +1,4 @@
-import React, { useEffect, useState }from "react";
+import React, { useEffect, useState } from "react";
 import api from './services/api';
 
 import "./styles.css";
@@ -19,7 +19,7 @@ function App() {
       techs: ['Node.js', 'ReactJS']
     })
 
-    setRepositories ([...repositories, response.data ]);
+    setRepositories([...repositories, response.data]);
   }
 
   async function handleRemoveRepository(id) {
@@ -36,7 +36,7 @@ function App() {
         {repositories.map(repository => (
           <li key={repository.id}>
             {repository.title}
-   
+
             <button onClick={() => handleRemoveRepository(repository.id)}>
               Remover
             </button>
